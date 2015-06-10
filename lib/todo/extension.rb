@@ -24,7 +24,7 @@ module Todo
         # the setBootstrapData method in client/todo/Extension.coffee
         # when the app boots
         def client_bootstrap_data(view)
-            nil
+            { todos: Task.order(created_at: 'desc') }
         end
     end
 
