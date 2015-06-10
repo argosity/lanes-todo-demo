@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  database: todo_dev
+  host: /tmp
+
+test:
+  adapter: postgresql
+  database: todo_test
+  host: /tmp
