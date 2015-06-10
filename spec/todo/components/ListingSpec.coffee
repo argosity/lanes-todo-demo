@@ -1,5 +1,12 @@
 describe "Todo.Components.Listing", ->
 
-    it "can be rendered", ->
-        component = LT.renderComponent(Todo.Components.Listing)
-        expect(component.getDOMNode().textContent).toMatch("Listing")
+    beforeEach ->
+        @summary = new Todo.Models.TasksSummary
+
+    it "lists tasks", ->
+        listing = LT.renderComponent(Todo.Components.Listing, summary: @summary)
+
+        expect(_.dom(listing).qsa('li').length).toEqual(0)
+        @summary.tasks.add(title: 'one')
+        @summary.tasks.add(title: 'two')
+        expect(_.dom(listing).qsa('li').length).toEqual(2)
