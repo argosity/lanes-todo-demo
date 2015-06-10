@@ -2,7 +2,7 @@ require_relative "../todo"
 
 # This will load the "Workspace" extension, which provides
 # a menu and tab based switching between screens.
-require "lanes/workspace/extension"
+# require "lanes/workspace/extension"
 
 # This will load the "Access" extension, which provides
 # Role based user access controls.  Before enabling it
