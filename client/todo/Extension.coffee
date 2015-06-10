@@ -23,7 +23,8 @@ class Todo.Extension extends Lanes.Extensions.Base
     onAvailable: Lanes.emptyFn
 
     # Routes that should be established go here
-    getRoutes: -> null
+    getRoutes: ->
+        Todo.Routes()
 
     # The root component that should be shown for this extension.
     # Will not be called if a different extension has included this one and it is the

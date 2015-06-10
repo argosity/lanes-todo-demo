@@ -3,6 +3,7 @@
 //=require_tree ./models
 //=require_tree ./components
 //=require ./screens/Base
+//=require ./Routes
 //=require ./Extension
 
 /*
