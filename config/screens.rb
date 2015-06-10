@@ -6,5 +6,15 @@
 # end
 
 Lanes::Screen.for_extension 'Todo' do | screens |
+    screens.define "main" do | screen |
+        screen.title       = "Main"
+        screen.description = ""
+        screen.icon        = ""
+        screen.group_id    = ""
+        screen.model_class = ""
+        screen.view_class  = "Main"
+        screen.js          = "main.js"
+        screen.css         = "main.css"
+    end
 
 end

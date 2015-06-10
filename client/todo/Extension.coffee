@@ -1,3 +1,5 @@
+##=require ./screens/main
+
 # This is the client-side version of Todo::Extension
 class Todo.Extension extends Lanes.Extensions.Base
 
@@ -25,4 +27,8 @@ class Todo.Extension extends Lanes.Extensions.Base
     # The root component that should be shown for this extension.
     # Will not be called if a different extension has included this one and it is the
     # "controlling" extension
-    rootComponent: (viewport) -> null
+    rootComponent: (viewport) ->
+        # render Todo.Screens.Main by default.  If this is changed the
+        # ##=require ./screens/main at the top of file must also be updated
+        # to ensure that the correct screen's definition will be available at boot
+        Todo.Screens.Main
