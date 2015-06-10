@@ -8,4 +8,5 @@ module Todo
 
     end
 
+    autoload :Task, "todo/models/task"
 end
